@@ -70,10 +70,10 @@ The initial state is set to `user`.
 		交通費:   
 		其他:   
 		總支出:   
-	*功能:   
-		*主功能:記帳 新增與刪除
-		*firebase應用
-		*圖片推播
+	* 功能:   
+		* 主功能:記帳 新增與刪除
+		* firebase應用
+		* 圖片推播
 
 ## Deploy
 Setting to deploy webhooks on Heroku.
