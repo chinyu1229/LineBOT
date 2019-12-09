@@ -35,8 +35,8 @@ The initial state is set to `user`.
 * user
 	* Input: "記帳"
 		* Reply: 喵喵喵~ 輸入想要記的項目~[餐費]  [娛樂]  [交通]  [其他]   
-			*Input:"餐費"   
-				*Reply:喵嗚嗚~ 輸入費用/或想刪除請輸入[清空]   
+			* Input:"餐費"   
+				* Reply:喵嗚嗚~ 輸入費用/或想刪除請輸入[清空]   
 					Input:"[正整數]"   
 						Reply:好的已經記好了喵~ 想看完整的要輸入[我的帳本]我就會幫你打開了窩~   
 					Input:清空   
