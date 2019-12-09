@@ -31,14 +31,45 @@ Or You can use [servo](http://serveo.net/) to expose local servers to the intern
 ## Usage
 The initial state is set to `user`.
 
-Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
 
 * user
 	* Input: "記帳"
-		* Reply: ""
+		* Reply: 喵喵喵~\n輸入想要記的項目~\n[餐費]  [娛樂]  [交通]  [其他]
+			Input:"餐費"
+				Reply:喵嗚嗚~\n輸入費用/或想刪除請輸入[清空]
+					Input:"[正整數]
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+					Input:清空
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+			Input:"娛樂"
+				Reply:喵嗚嗚~\n輸入費用/或想刪除請輸入[清空]
+					Input:"[正整數]
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+					Input:清空
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+			Input:"交通"
+				Reply:喵嗚嗚~\n輸入費用/或想刪除請輸入[清空]
+					Input:"[正整數]
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+					Input:清空
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+			Input:"其他"
+				Reply:喵嗚嗚~\n輸入費用/或想刪除請輸入[清空]
+					Input:"[正整數]
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+					Input:清空
+						Reply:好的已經記好了喵~\n想看完整的要輸入[我的帳本]\n我就會幫你打開了窩~
+						
+					
 
 	* Input: "我的帳本"
-		* Reply: "喵哈哈!!來看看你都花了多少錢吧~\n餐費:\n娛樂費:\n交通費:\n其他:\n總支出:"
+		* Reply: 
+		喵哈哈!!來看看你都花了多少錢吧~
+		餐費:
+		娛樂費:
+		交通費:
+		其他:
+		總支出:
 
 ## Deploy
 Setting to deploy webhooks on Heroku.
