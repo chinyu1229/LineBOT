@@ -54,7 +54,7 @@ The initial state is set to `user`.
 					* Input:清空   
 						* Reply:好的已經記好了喵~ 想看完整的要輸入[我的帳本] 我就會幫你打開了窩~   
 			* Input:"其他"   
-				* Reply:喵嗚嗚~\n輸入費用/或想刪除請輸入[清空]   
+				* Reply:喵嗚嗚~輸入費用/或想刪除請輸入[清空]   
 					* Input:"[正整數]"   
 						* Reply:好的已經記好了喵~ 想看完整的要輸入[我的帳本] 我就會幫你打開了窩~   
 					* Input:清空   
@@ -70,6 +70,10 @@ The initial state is set to `user`.
 		交通費:   
 		其他:   
 		總支出:   
+	*功能:   
+		*主功能:記帳 新增與刪除
+		*firebase應用
+		*圖片推播
 
 ## Deploy
 Setting to deploy webhooks on Heroku.
