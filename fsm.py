@@ -1,10 +1,17 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-
+from linebot.models import (
+    TemplateSendMessage, ButtonsTemplate, MessageTemplateAction,
+    PostbackAction, MessageAction, ImageSendMessage,
+    URIAction, AltUri, DatetimePickerAction,
+    ConfirmTemplate, CarouselTemplate, CarouselColumn,
+    ImageCarouselTemplate, ImageCarouselColumn
+)
 from transitions.extensions import GraphMachine
 
 from utils import send_text_message
+from utils import send_image_url
 
 cred=credentials.Certificate('linebot-1708b.json')
 firebase_admin.initialize_app(cred)
@@ -198,6 +205,12 @@ class TocMachine(GraphMachine):
         send_text_message(reply_token,"喵哈哈!!來看看你都花了多少錢吧~\n"+"餐費:"+str(doc.to_dict()['food_money'])
                 +"\n"+"娛樂費:"+str(doc.to_dict()['entertainment'])+"\n"+"交通費:"+str(doc.to_dict()['traffic'])
                 +"\n"+"其他:"+str(doc.to_dict()['other'])+"\n"+"總支出:"+str(total))
+        user_id=event.source.user_id
+        img=ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/RV5O2Sz.jpg',
+                preview_image_url = 'https://i.imgur.com/RV5O2Sz.jpg'
+                )
+        send_image_url(user_id,img)
         self.go_back()
 
    # def on_exit_state2(self):
